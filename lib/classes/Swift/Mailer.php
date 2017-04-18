@@ -88,7 +88,8 @@ class Swift_Mailer
                 $failedRecipients[] = $address;
             }
         }
-
+        
+        $this->_transport->stop();
         return $sent;
     }
 
